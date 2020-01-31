@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">ReminderTT</string>
+
+    <string name="menu_main_settings">Configurações</string>
+
+
+    <string name="settings_notification_initial_time">Horário de entrada</string>
+
+</resources>
