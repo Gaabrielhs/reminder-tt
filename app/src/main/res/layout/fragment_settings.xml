@@ -1,104 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.SettingsFragment">
+<FrameLayout android:layout_width="match_parent" android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <GridLayout
-        android:paddingTop="50dp"
-        android:layout_width="match_parent"
-        android:layout_height="150dp"
-        android:columnCount="2"
-        android:rowCount="1"
-        android:horizontalSpacing="10dp"
-        android:verticalSpacing="10dp">
 
-        <FrameLayout
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
-            android:paddingHorizontal="5dp">
-
-        <androidx.cardview.widget.CardView
-            android:id="@+id/settings_time_begin_card"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:clickable="true"
-            android:foreground="?android:attr/selectableItemBackground">
-
-            <androidx.coordinatorlayout.widget.CoordinatorLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="10dp"
-                    android:text="Entrada" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textSize="35sp"
-                    android:layout_gravity="center"
-                    android:id="@+id/settings_time_begin_text"
-                    android:text="8:30" />
-
-            </androidx.coordinatorlayout.widget.CoordinatorLayout>
-        </androidx.cardview.widget.CardView>
-        </FrameLayout>
-        <FrameLayout
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_columnWeight="1"
-            android:layout_rowWeight="1"
-            android:paddingHorizontal="5dp">
-
-            <androidx.cardview.widget.CardView
-                android:id="@+id/settings_time_end_card"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:clickable="true"
-                android:foreground="?android:attr/selectableItemBackground"
-                >
-
-                <androidx.coordinatorlayout.widget.CoordinatorLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center_horizontal"
-                        android:layout_marginTop="10dp"
-                        android:text="Saída estimada" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:textSize="35sp"
-                        android:layout_gravity="center"
-                        android:id="@+id/settings_time_end_text"
-                        android:text="17:30" />
-
-                </androidx.coordinatorlayout.widget.CoordinatorLayout>
-            </androidx.cardview.widget.CardView>
-        </FrameLayout>
-    </GridLayout>
-
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/save_fab"
+    <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom|right"
-        android:layout_margin="16dp"
-        android:backgroundTint="@color/colorPrimary"
-        app:srcCompat="@drawable/ic_save_white_24dp"/>
+        android:layout_gravity="center"
+        android:textSize="54dp"
+        android:textColor="#00ffff"
+        android:text="SETTINGS" />
 
 </FrameLayout>
-</layout>

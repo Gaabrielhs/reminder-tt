@@ -14,9 +14,7 @@ object Application{
     val SHARED_PREF_KEY = "REMINDERTT"
     val BEGIN_HOUR_KEY = "BEGIN_HOUR"
     val END_HOUR_KEY = "END_HOUR"
-
-    val BEGIN_MINUTE_KEY = "BEGIN_MINUTE"
-    val END_MINUTE_KEY = "END_MINUTE"
+    val EXPEDIENT_DURATION = 9
 
     val LAST_NOTIFICATION_ID_KEY = "LAST_NOTIFICATION_ID"
 
@@ -48,6 +46,14 @@ object Application{
         notificationId++
         NotificationManagerCompat.from(context).notify(notificationId,builder.build())
         sharedPreferences.edit().putInt(LAST_NOTIFICATION_ID_KEY, notificationId).apply()
+    }
+
+    fun save(key: String, value: String) : Boolean {
+        return sharedPreferences.edit().putString(key, value).commit()
+    }
+
+    fun get(key: String) : String? {
+        return sharedPreferences.getString(key, null)
     }
 
     private fun initializeNotificationCenter(context: Context){

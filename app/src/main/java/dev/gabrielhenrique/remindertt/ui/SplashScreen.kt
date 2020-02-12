@@ -2,10 +2,9 @@ package dev.gabrielhenrique.remindertt.ui
 
 import android.content.Intent
 import android.os.Bundle
-import android.os.PersistableBundle
 import androidx.appcompat.app.AppCompatActivity
-import dev.gabrielhenrique.remindertt.R
 import dev.gabrielhenrique.remindertt.Application
+import dev.gabrielhenrique.remindertt.R
 
 class SplashScreen : AppCompatActivity() {
 

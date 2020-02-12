@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:enterFadeDuration="@android:integer/config_longAnimTime"
+    android:exitFadeDuration="@android:integer/config_longAnimTime">
+
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="45"
+                android:centerX="0.5"
+                android:centerY="0.5"
+                android:endColor="#FF0000"
+                android:gradientRadius="100%"
+                android:startColor="#FF5353"
+                android:type="radial" />
+        </shape>
+    </item>
+    <item>
+        <shape android:shape="rectangle">
+            <gradient
+                android:angle="45"
+                android:centerX="0.5"
+                android:centerY="0.5"
+                android:endColor="#01f1fa"
+                android:gradientRadius="100%"
+                android:startColor="#0189ff"
+                android:type="radial" />
+        </shape>
+    </item>
+</selector>
