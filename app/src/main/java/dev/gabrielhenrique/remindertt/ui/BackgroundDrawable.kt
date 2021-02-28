@@ -11,15 +11,21 @@ class BackgroundDrawable(
     private var y: Float
 ) : Drawable() {
     private var transparency = 255
+    private var expanded = false
 
     override fun draw(canvas: Canvas) {
+
+//        if(expanded){
+//            canvas.drawColor(context.getColor(R.color.backgroundClickLight))
+//            return
+//        }
         // Get the drawable's bounds
         val width: Int = bounds.width()
         val height: Int = bounds.height()
 //        val radius: Float = Math.min(width, height).toFloat() / 2f
         val radius: Float = Math.min(width, height).toFloat()
 
-        val gradient = RadialGradient(x,y, radius, context.getColor(R.color.backgroundClickLight), context.getColor(R.color.backgroundClickDark) ,Shader.TileMode.CLAMP)
+        val gradient = RadialGradient(x,y, radius, context.getColor(R.color.backgroundClickLight2), context.getColor(R.color.backgroundClickDark) ,Shader.TileMode.CLAMP)
 //        val myPaint = Paint().
         // Draw a red circle in the center
         val gradientPaint = Paint()
@@ -44,5 +50,10 @@ class BackgroundDrawable(
     fun setCoordinates(x: Float, y: Float){
         this.x = x
         this.y = y
+    }
+
+    fun expand(){
+        expanded = true
+        invalidateSelf()
     }
 }

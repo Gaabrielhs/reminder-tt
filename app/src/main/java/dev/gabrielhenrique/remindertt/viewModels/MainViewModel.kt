@@ -25,5 +25,4 @@ class MainViewModel: ViewModel() {
             setHourAndMinute(savedBeginDate)
         })
     }
-
 }

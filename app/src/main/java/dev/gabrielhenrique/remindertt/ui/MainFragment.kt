@@ -99,6 +99,10 @@ class MainFragment : Fragment() {
             }
         }
 
+        main_frame.setOnLongClickListener {
+            backgroundDrawable.expand()
+            return@setOnLongClickListener true
+        }
 
         main_frame.setOnTouchListener { v, event ->
             backgroundDrawable.setCoordinates(event.x, event.y)
@@ -112,7 +116,7 @@ class MainFragment : Fragment() {
                     transitionBackground.reverseTransition(1000)
                 }
             }
-            return@setOnTouchListener true
+            return@setOnTouchListener false
         }
 
     }
